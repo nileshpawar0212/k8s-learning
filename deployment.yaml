@@ -1,1 +1,23 @@
 ---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+  labels:
+    app: myapp
+    type: front-end
+spec:
+ template:
+    matadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        type: front-end
+    spec:
+     coantainers:
+     - name: nginx-coantainer
+       imane: nginx
+replicas:3
+selectors:
+  matchLabels:
+   type: front-end
