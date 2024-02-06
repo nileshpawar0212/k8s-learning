@@ -16,7 +16,7 @@ spec:
      coantainers:
      - name: nginx-coantainer
        imane: nginx
-replicas: 3
-selector:
-  matchLabels:
-   type: front-end
+    replicas: 3
+    selector:
+      matchLabels:
+      type: front-end
